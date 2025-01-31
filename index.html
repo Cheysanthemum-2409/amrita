@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fashion Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Fashion Facts</h1>
+        <p id="factDisplay">Click the button to see a fact!</p>
+        <button id="factButton">Show Random Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Fashion magazines provide insights into the latest trends in clothing, accessories, and beauty.",
+            "They often feature interviews with designers, models, and celebrities, offering a behind-the-scenes look at the fashion industry.",
+            "Fashion magazines typically include high-quality photography and illustrations to showcase styles and products.",
+            "They serve as a platform for advertising luxury brands and products, influencing consumer purchasing decisions.",
+            "Fashion magazines often highlight seasonal trends, helping readers stay updated on what to wear throughout the year.",
+            "They may also cover topics related to lifestyle, health, and wellness, connecting fashion to broader cultural themes.",
+            "Many fashion magazines have transitioned to digital formats, expanding their reach through online platforms and social media.",
+            "Some well-known fashion magazines include Vogue, Harper's Bazaar, and Elle.",
+            "Fashion magazines often host events such as fashion shows and award ceremonies, further engaging with the fashion community.",
+            "They play a significant role in shaping public perception of beauty standards and fashion norms."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
